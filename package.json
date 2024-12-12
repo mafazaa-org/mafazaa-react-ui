@@ -1,0 +1,24 @@
+{
+  "name": "mafazaa-react-ui",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "next": "^13.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.0.0",
+    "postcss": "^8.0.0"
+  }
+}
