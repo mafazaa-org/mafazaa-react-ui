@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import group1 from "@/assets/Group 1.svg";
-import group2 from "@/assets/Group 2.svg";
+import group1 from "../../assets/svg/Group 1.svg";
+import group2 from "../../assets/Group 2.svg";
 function FollowUs({ links }) {
   return (
     <section

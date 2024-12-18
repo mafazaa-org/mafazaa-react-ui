@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/logo/svg/logo_dark.svg";
+import Logo from "../../public/logo/svg/logo_dark.svg";
 import { usePathname } from "next/navigation"; // Next.js 13+ (app directory)
 
 const sideLinksWidth = "w-full";
