@@ -1,6 +1,5 @@
 import { createElement as _createElement } from "react";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from "react";
 import Button from "./Button";
 function CenterSection({ backgroundImage, textColor, title, description, buttons, }) {
     return (_jsx("section", { className: `py-24 min-h-screen w-full object-cover bg-no-repeat bg-cover bg-center 

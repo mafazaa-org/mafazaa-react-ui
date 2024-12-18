@@ -1,6 +1,5 @@
 import { createElement as _createElement } from "react";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from "react";
 import Image from "next/image";
 import Button from "./Button";
 function SideSection({ imageSrc, title, description, buttons, textColor, reverse, }) {

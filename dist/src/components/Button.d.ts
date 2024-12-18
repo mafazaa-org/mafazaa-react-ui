@@ -1,4 +1,4 @@
-declare function Button({ backgroundOrBorderColor, textColor, text, type, link, }: ButtonProps): any;
+declare function Button({ backgroundOrBorderColor, textColor, text, type, link, }: ButtonProps): import("react/jsx-runtime").JSX.Element;
 export default Button;
 export type ButtonProps = {
     link: string;

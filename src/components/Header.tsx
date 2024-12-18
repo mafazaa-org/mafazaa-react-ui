@@ -2,11 +2,18 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/logo/svg/logo_dark.svg";
-import { usePathname } from "next/navigation"; // Next.js 13+ (app directory)
+import { usePathname } from "next/navigation";
 
 const sideLinksWidth = "w-full";
-function Header({ links, navLinks }: { links: any; navLinks: any }) {
+function Header({
+  links,
+  navLinks,
+  logo,
+}: {
+  links: any;
+  navLinks: any;
+  logo: any;
+}) {
   const pathname = usePathname();
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,7 +84,7 @@ function Header({ links, navLinks }: { links: any; navLinks: any }) {
       </button>
       <Link href="/">
         <Image
-          src={Logo}
+          src={logo}
           alt="logo"
           width={143}
           height={67}

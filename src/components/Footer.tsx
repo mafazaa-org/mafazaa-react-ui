@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo/svg/logo_dark.svg";
 // import { usePathname } from "next/navigation";
 
 // type FooterColumn = {
@@ -18,10 +17,12 @@ function Footer({
   links,
   navLinks,
   projects,
+  logo,
 }: {
   links: any;
   navLinks: any;
   projects: any;
+  logo: any;
 }) {
   // need to make it dynamic
 

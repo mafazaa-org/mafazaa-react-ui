@@ -7,6 +7,6 @@ export type SideSectionProps = {
     buttons: ButtonProps[];
     reverse?: boolean;
 };
-declare function SideSection({ imageSrc, title, description, buttons, textColor, reverse, }: SideSectionProps): any;
+declare function SideSection({ imageSrc, title, description, buttons, textColor, reverse, }: SideSectionProps): import("react/jsx-runtime").JSX.Element;
 export default SideSection;
 //# sourceMappingURL=SideSection.d.ts.map

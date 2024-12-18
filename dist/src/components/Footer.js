@@ -1,12 +1,11 @@
 "use client";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/logo/svg/logo_dark.svg";
 const textColor = "text-bright-one";
 const afterborder = "relative after:bg-accent-color after:h-[1px] after:w-2/3 after:absolute after:bottom-0 after:right-0";
-function Footer({ links, navLinks, projects, }) {
+function Footer({ links, navLinks, projects, logo, }) {
     const [isSpecialRoute, setIsSpecialRoute] = useState(false);
     const columns = [
         {

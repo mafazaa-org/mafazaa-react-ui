@@ -1,6 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import Link from "next/link";
-import React from "react";
 function Button({ backgroundOrBorderColor, textColor, text, type, link, }) {
     return (_jsx(Link, { href: link, children: _jsx("button", { "aria-label": text, className: `font-bold text-base rounded-lg min-w-52 
           ${type === "outline"

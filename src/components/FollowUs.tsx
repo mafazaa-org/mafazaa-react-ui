@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import group1 from "../../assets/svg/Group 1.svg";
-import group2 from "../../assets/Group 2.svg";
-function FollowUs({ links }) {
+function FollowUs({ links, img1, img2 }) {
   return (
     <section
       className="bg-gradient-to-r from-dark-one to-dark-two text-bright-one text-center rounded-xl
@@ -19,7 +17,7 @@ function FollowUs({ links }) {
         after:bg-black"
     >
       <Image
-        src={group1}
+        src={img1}
         alt="icon"
         width={325}
         height={240}
@@ -48,7 +46,7 @@ function FollowUs({ links }) {
         ))}
       </ul>
       <Image
-        src={group2}
+        src={img2}
         alt="icon"
         width={325}
         height={240}
