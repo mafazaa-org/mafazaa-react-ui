@@ -12,7 +12,7 @@ function Button({
     <Link href={link}>
       <button
         aria-label={text}
-        className={`font-bold text-base rounded-lg min-w-52 
+        className={`font-bold text-base rounded-lg min-w-52
           ${
             type === "outline"
               ? `bg-transparent py-[14.5px] px-[45px]`
