@@ -96,7 +96,7 @@ function Header({
       >
         {navLinks?.map((link, index) => (
           <li key={index}>
-            <Link href={link.href}>{link.label}</Link>
+            <Link href={link.href}>{link.text}</Link>
           </li>
         ))}
       </ul>
@@ -108,7 +108,7 @@ function Header({
                 href={link.href}
                 className="text-bright-one font-bold hover:text-gray-200"
               >
-                {link.label}
+                {link.text}
               </Link>
             </li>
           ))}
