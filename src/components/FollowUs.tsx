@@ -35,8 +35,8 @@ function FollowUs({ links, img1, img2 }) {
           <li key={index}>
             <Link href={social?.href} target="_blank">
               <Image
-                src={social.src}
-                alt={social.alt}
+                src={social?.src}
+                alt={social?.text}
                 width={40}
                 height={40}
                 className="w-6 lg:w-10"
