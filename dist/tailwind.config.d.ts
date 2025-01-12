@@ -20,7 +20,7 @@ declare const _default: {
             };
         };
     };
-    plugins: never[];
+    plugins: any[];
 };
 export default _default;
 //# sourceMappingURL=tailwind.config.d.ts.map
