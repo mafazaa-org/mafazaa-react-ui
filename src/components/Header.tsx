@@ -3,9 +3,17 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logoImage from "../../public/logo/svg/logo_dark.svg";
 
-const sideLinksWidth = "w-full";
-function Header({ links, logo }: { links: any; logo: any }) {
+function Header({
+  links,
+  logo = logoImage,
+  show = false,
+}: {
+  links: any;
+  logo?: any;
+  show?: boolean;
+}) {
   const pathname = usePathname();
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,14 +37,14 @@ function Header({ links, logo }: { links: any; logo: any }) {
   return (
     <header
       dir="ltr"
-      className={`flex md:grid grid-cols-3 items-center justify-between md:justify-items-center px-6 py-4 md:px-12 lg:px-32 fixed top-0 w-full z-20 transition-colors duration-300 h-16 md:h-20 lg:h-24 ${
-        isScrolled || isSpecialRoute
+      className={`flex md:grid grid-cols-10 items-center justify-between md:justify-items-center px-6 py-4 md:px-12 lg:px-32 fixed top-0 w-full z-20 transition-colors duration-300 h-16 md:h-20 lg:h-24 ${
+        show || isScrolled || isSpecialRoute
           ? "bg-gradient-to-r from-dark-one to-dark-two"
           : "bg-transparent"
       }`}
     >
       <ul
-        className={`hidden md:flex justify-start items-center gap-6 ${sideLinksWidth}`}
+        className={`hidden md:flex justify-start items-center gap-6 w-full col-span-3`}
       >
         {links?.socialLinks?.map((social: any, index: any) => (
           <li key={index}>
@@ -74,24 +82,28 @@ function Header({ links, logo }: { links: any; logo: any }) {
           )}
         </svg>
       </button>
-      <Link href="/">
+      <Link href="/" className="col-span-3">
         <Image
           src={logo}
           alt="logo"
           width={143}
           height={67}
-          className="max-lg:w-[67px] max-lg:h-[32px] object-contain"
+          className="max-lg:w-[67px] max-lg:h-[32px] object-contain "
         />
       </Link>
       <ul
-        className={`hidden md:flex justify-end items-center gap-4 text-bright-one font-bold ${sideLinksWidth}`}
+        className={`hidden md:flex col-span-4 justify-end items-center gap-4 text-bright-one font-semibold w-full`}
       >
         {links?.importantLinks?.map((link, index) => (
-          <li key={index} className="text-sm">
+          <li
+            key={index}
+            className="text-base hover:underline hover:text-accent-color"
+          >
             <Link href={link.href}>{link.text}</Link>
           </li>
         ))}
       </ul>
+
       {isMenuOpen && (
         <ul className="md:hidden bg-gradient-to-r from-dark-one to-dark-two px-6 py-4 z-10 fixed left-0 top-0 w-full h-screen flex flex-col-reverse items-center justify-center">
           {links?.importantLinks?.map((link, index) => (

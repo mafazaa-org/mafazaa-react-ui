@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import logoImage from "../../public/logo/svg/logo_dark.svg";
+
 // import { usePathname } from "next/navigation";
 
 // type FooterColumn = {
@@ -16,11 +18,11 @@ const afterborder =
 function Footer({
   links,
   projects,
-  logo,
+  logo = logoImage,
 }: {
   links: any;
   projects: any;
-  logo: any;
+  logo?: any;
 }) {
   // need to make it dynamic
 
@@ -29,7 +31,7 @@ function Footer({
   const columns = [
     {
       title: "روابط مهمة",
-      links: links.importantLinks.reverse(),
+      links: links.importantLinks,
     },
     {
       title: "مشاريعنا",
@@ -94,9 +96,12 @@ function Footer({
               >
                 {column?.title}
               </h3>
-              <ul className="flex flex-col justify-end gap-2 lg:gap-4 text-base font-bold">
+              <ul className="flex flex-col-reverse justify-end gap-2 lg:gap-4 text-base font-bold">
                 {column?.links?.map((link, linkIndex) => (
-                  <li key={linkIndex}>
+                  <li
+                    key={linkIndex}
+                    className="hover:underline hover:text-accent-color"
+                  >
                     <Link href={link?.href}>{link?.label || link?.text}</Link>
                   </li>
                 ))}

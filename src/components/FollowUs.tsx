@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-function FollowUs({ links, img1, img2 }) {
+import image1 from "../../assets/svg/Group_1.svg";
+import image2 from "../../assets/svg/Group 2.svg";
+function FollowUs({ links, img1 = image1, img2 = image2 }) {
   return (
     <section
       className="bg-gradient-to-r from-dark-one to-dark-two text-bright-one text-center rounded-xl
