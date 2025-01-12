@@ -5,15 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const sideLinksWidth = "w-full";
-function Header({
-  links,
-  navLinks,
-  logo,
-}: {
-  links: any;
-  navLinks: any;
-  logo: any;
-}) {
+function Header({ links, logo }: { links: any; logo: any }) {
   const pathname = usePathname();
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -92,17 +84,17 @@ function Header({
         />
       </Link>
       <ul
-        className={`hidden md:flex justify-end items-center gap-6 text-bright-one font-bold ${sideLinksWidth}`}
+        className={`hidden md:flex justify-end items-center gap-4 text-bright-one font-bold ${sideLinksWidth}`}
       >
-        {navLinks?.map((link, index) => (
-          <li key={index}>
+        {links?.importantLinks?.map((link, index) => (
+          <li key={index} className="text-sm">
             <Link href={link.href}>{link.text}</Link>
           </li>
         ))}
       </ul>
       {isMenuOpen && (
         <ul className="md:hidden bg-gradient-to-r from-dark-one to-dark-two px-6 py-4 z-10 fixed left-0 top-0 w-full h-screen flex flex-col-reverse items-center justify-center">
-          {navLinks?.map((link, index) => (
+          {links?.importantLinks?.map((link, index) => (
             <li key={index} className="py-2">
               <Link
                 href={link.href}

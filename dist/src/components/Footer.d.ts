@@ -1,6 +1,5 @@
-declare function Footer({ links, navLinks, projects, logo, }: {
+declare function Footer({ links, projects, logo, }: {
     links: any;
-    navLinks: any;
     projects: any;
     logo: any;
 }): import("react/jsx-runtime").JSX.Element;

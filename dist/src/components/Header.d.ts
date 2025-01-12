@@ -1,6 +1,5 @@
-declare function Header({ links, navLinks, logo, }: {
+declare function Header({ links, logo }: {
     links: any;
-    navLinks: any;
     logo: any;
 }): import("react/jsx-runtime").JSX.Element;
 export default Header;

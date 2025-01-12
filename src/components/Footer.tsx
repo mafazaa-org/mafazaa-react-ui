@@ -15,12 +15,10 @@ const afterborder =
 
 function Footer({
   links,
-  navLinks,
   projects,
   logo,
 }: {
   links: any;
-  navLinks: any;
   projects: any;
   logo: any;
 }) {
@@ -31,7 +29,7 @@ function Footer({
   const columns = [
     {
       title: "روابط مهمة",
-      links: navLinks,
+      links: links.importantLinks.reverse(),
     },
     {
       title: "مشاريعنا",
@@ -99,7 +97,7 @@ function Footer({
               <ul className="flex flex-col justify-end gap-2 lg:gap-4 text-base font-bold">
                 {column?.links?.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link href={link?.href}>{link?.label | link?.text}</Link>
+                    <Link href={link?.href}>{link?.label || link?.text}</Link>
                   </li>
                 ))}
               </ul>
