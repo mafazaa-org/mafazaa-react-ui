@@ -1,7 +1,13 @@
 import "../src/styles/globals.css";
-import { Button, FollowUs, Footer, Form, Header, Project } from "../src/index";
-import React, { useEffect, useState } from "react";
-// import logo from "../public/logo/svg/logo_dark.svg";
+import {
+  Button,
+  FollowUs,
+  Footer,
+  Form,
+  Header,
+  Project,
+} from "../dist/src/index";
+import React from "react";
 
 function MyApp() {
   const followlinks = {

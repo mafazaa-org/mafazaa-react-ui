@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logoImage from "../../public/logo/svg/logo_dark.svg";
+import logoImage from "@/public/logo/svg/logo_dark.svg";
 
 function Header({
   links,
