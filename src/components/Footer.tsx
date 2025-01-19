@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logoImage from "@/public/logo/svg/logo_dark.svg";
 
 // import { usePathname } from "next/navigation";
 
@@ -18,7 +17,7 @@ const afterborder =
 function Footer({
   links,
   projects,
-  logo = logoImage,
+  logo,
 }: {
   links: any;
   projects: any;

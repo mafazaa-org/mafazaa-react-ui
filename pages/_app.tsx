@@ -1,6 +1,7 @@
 import "../src/styles/globals.css";
 import {
   Button,
+  CenterSection,
   FollowUs,
   Footer,
   Form,
@@ -8,7 +9,6 @@ import {
   Project,
 } from "../dist/src/index";
 import React from "react";
-
 function MyApp() {
   const followlinks = {
     socialLinks: [
@@ -115,10 +115,8 @@ function MyApp() {
   ];
   return (
     <div>
-      <h1 className="text-4xl p-4 text-center">
-        Testing The Package Components
-      </h1>
       <Header links={links} show />
+
       <Form />
       <div className="flex items-center justify-center gap-6 p-6">
         <Button

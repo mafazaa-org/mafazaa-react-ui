@@ -1,6 +1,7 @@
 import { ButtonProps } from "./Button";
+import { StaticImageData } from "next/image";
 export type CenterSectionProps = {
-    backgroundImage: string;
+    backgroundImage: string | StaticImageData;
     textColor: string;
     title: string;
     description: string;

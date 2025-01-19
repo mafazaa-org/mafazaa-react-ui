@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logoImage from "@/public/logo/svg/logo_dark.svg";
-function Header({ links, logo = logoImage, show = false, }) {
+function Header({ links, logo, show = false, }) {
     var _a, _b, _c;
     const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
