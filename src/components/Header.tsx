@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+type linkType = { text: string; href: string };
 function Header({
   links,
   logo,
@@ -18,7 +18,9 @@ function Header({
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSpecialRoute, setIsSpecialRoute] = useState(false);
-
+  const filteredLinks = links?.importantLinks?.filter(
+    (link: linkType) => link?.text !== "الرئيسية" && link.text !== "تواصل معنا"
+  );
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -35,8 +37,7 @@ function Header({
 
   return (
     <header
-      dir="ltr"
-      className={`flex md:grid grid-cols-10 items-center justify-between md:justify-items-center px-6 py-4 md:px-12 lg:px-32 fixed top-0 w-full z-20 transition-colors duration-300 h-16 md:h-20 lg:h-24 ${
+      className={`flex md:grid grid-cols-9 items-center justify-between md:justify-items-center px-6 py-4 md:px-12 lg:px-32 fixed top-0 w-full z-20 transition-colors duration-300 h-16 md:h-20 lg:h-24 ${
         show || isScrolled || isSpecialRoute
           ? "bg-gradient-to-r from-dark-one to-dark-two"
           : "bg-transparent"
@@ -91,9 +92,9 @@ function Header({
         />
       </Link>
       <ul
-        className={`hidden md:flex col-span-4 justify-end items-center gap-4 text-bright-one font-semibold w-full`}
+        className={`hidden md:flex col-span-3 justify-end items-center gap-4 text-bright-one font-semibold w-full`}
       >
-        {links?.importantLinks?.map((link, index) => (
+        {filteredLinks?.map((link, index) => (
           <li
             key={index}
             className="text-base hover:underline hover:text-accent-color"

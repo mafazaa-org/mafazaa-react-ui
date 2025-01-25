@@ -9,9 +9,8 @@ import {
   Project,
 } from "../src/index";
 import React from "react";
-import img1 from "../public/svg/Group 1.svg";
-import img2 from "../public/svg/Group 2.svg";
-import logo from "../public/logo/svg/logo_dark.svg";
+import img1 from "../assets/svg/Group 1.svg";
+import img2 from "../assets/svg/Group 2.svg";
 function MyApp() {
   const followlinks = {
     socialLinks: [
@@ -118,7 +117,7 @@ function MyApp() {
   ];
   return (
     <div>
-      <Header links={links} show logo={logo} />
+      <Header links={links} show />
 
       <Form />
       <div className="flex items-center justify-center gap-6 p-6">
@@ -149,7 +148,7 @@ function MyApp() {
           en={""}
         />{" "}
       </div>
-      <Footer links={links} projects={projects} logo={logo} />
+      <Footer links={links} projects={projects} />
     </div>
   );
 }
