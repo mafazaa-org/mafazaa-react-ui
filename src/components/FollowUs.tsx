@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-function FollowUs({ links, img1, img2 }) {
+import image1 from "@/assets/svg/Group_1.svg";
+import image2 from "@/assets/svg/Group 2.svg";
+function FollowUs({ links, img1 = image1, img2 = image2 }) {
   return (
     <section
       className="bg-gradient-to-r from-dark-one to-dark-two text-bright-one text-center rounded-xl
@@ -35,8 +37,8 @@ function FollowUs({ links, img1, img2 }) {
           <li key={index}>
             <Link href={social?.href} target="_blank">
               <Image
-                src={social.src}
-                alt={social.alt}
+                src={social?.src}
+                alt={social?.text}
                 width={40}
                 height={40}
                 className="w-6 lg:w-10"
