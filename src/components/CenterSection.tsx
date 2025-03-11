@@ -1,8 +1,9 @@
 import React from "react";
 import Button, { ButtonProps } from "./Button";
+import { StaticImageData } from "next/image";
 
 export type CenterSectionProps = {
-  backgroundImage: string;
+  backgroundImage: string | StaticImageData;
   textColor: string;
   title: string;
   description: string;
@@ -16,6 +17,8 @@ function CenterSection({
   description,
   buttons,
 }: CenterSectionProps) {
+  const backgroundImageUrl =
+    typeof backgroundImage === "string" ? backgroundImage : backgroundImage.src;
   return (
     <section
       className={`py-24 min-h-screen w-full object-cover bg-no-repeat bg-cover bg-center 
@@ -29,7 +32,7 @@ function CenterSection({
       `}
       style={{
         color: textColor,
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

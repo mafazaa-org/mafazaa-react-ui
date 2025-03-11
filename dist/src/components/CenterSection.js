@@ -2,6 +2,7 @@ import { createElement as _createElement } from "react";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import Button from "./Button";
 function CenterSection({ backgroundImage, textColor, title, description, buttons, }) {
+    const backgroundImageUrl = typeof backgroundImage === "string" ? backgroundImage : backgroundImage.src;
     return (_jsx("section", { className: `py-24 min-h-screen w-full object-cover bg-no-repeat bg-cover bg-center 
       relative overflow-hidden flex items-center justify-center z-10 before:content-[''] bg-centerSectionBg
       before:absolute
@@ -12,7 +13,7 @@ function CenterSection({ backgroundImage, textColor, title, description, buttons
       before:z-[-5]
       `, style: {
             color: textColor,
-            backgroundImage: `url(${backgroundImage})`,
+            backgroundImage: `url(${backgroundImageUrl})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

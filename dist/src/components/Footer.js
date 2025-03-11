@@ -3,10 +3,9 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logoImage from "@/public/logo/svg/logo_dark.svg";
 const textColor = "text-bright-one";
 const afterborder = "relative after:bg-accent-color after:h-[1px] after:w-2/3 after:absolute after:bottom-0 after:right-0";
-function Footer({ links, projects, logo = logoImage, }) {
+function Footer({ links, projects, logo, }) {
     const [isSpecialRoute, setIsSpecialRoute] = useState(false);
     const columns = [
         {
