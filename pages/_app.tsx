@@ -121,7 +121,7 @@ function MyApp() {
       <Header links={links} show logo={logo} />
 
       <Form />
-      <div className="flex items-center justify-center gap-6 p-6">
+      <div className="flex flex-col items-center justify-center gap-6 p-6">
         <Button
           link="/"
           text="testing"
